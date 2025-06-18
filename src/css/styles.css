@@ -1,3 +1,8 @@
+/*color menu*/
+#main-header{
+
+    background-color: rgb(0,0, 37);
+}
 
 /* ...existing code... */
 .hero-img-container img {
@@ -12,13 +17,6 @@
 
     width: 100%;
     height: 200px;
-}
-
-/*color menu*/
-
-#main-header.bg-primary{
-
-    background-color: rgb(0,0, 37);
 }
 
 /* Hover animado para links del header */
