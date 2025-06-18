@@ -43,7 +43,7 @@ footer a {
     color: navy;
     text-decoration: none;
 }
-
+/*
 @keyframes pop-scale {
     0% {
         transform: translate(120%, 120%) scale(0.5);
