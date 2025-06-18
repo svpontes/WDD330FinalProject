@@ -10,6 +10,6 @@ export async function autocompleteCity(query) {
     country: f.properties.country,
     lat: f.properties.lat,
     lon: f.properties.lon,
-    cityCode: f.properties.city || f.properties.name // Para Amadeus, deberías mapear a un código IATA real
+    cityCode: f.properties.city || f.properties.name // Nota: para Amadeus, debería mapearse a un código IATA real
   }));
 }
