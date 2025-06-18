@@ -1,7 +1,7 @@
 /*color menu*/
 #main-header{
 
-    background-color: rgb(0,0, 37);
+    background-color: rgb(0,0, 37)!important;
 }
 
 /* ...existing code... */
