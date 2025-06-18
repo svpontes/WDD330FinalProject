@@ -22,8 +22,8 @@
 .navbar-toggler-icon {
     /* Define a cor das barrinhas do SVG. No Bootstrap 5, isso usa um filtro. */
     /* O valor 'invert(1) grayscale(100%) brightness(200%)' é um filtro comum para transformar preto em branco. */
-    filter: invert(1) grayscale(100%) brightness(200%);
-    color: white;
+    filter: invert(1) grayscale(100%) brightness(200%)!important;
+    
 }
 
 /* Hover animado para links del header */
