@@ -16,7 +16,7 @@
 
 /*color menu*/
 
-.navbar navbar-expand-lg container{
+#main-header.bg-primary{
 
     background-color: rgb(0,0, 37);
 }
