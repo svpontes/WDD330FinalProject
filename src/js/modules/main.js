@@ -193,8 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const destination = destInput.value;
       const departureDate = document.getElementById('departure-date').value;
-      window.location.href = `/searchResult.html?destination=<span class="math-inline">\{encodeURIComponent\(destination\)\}&departure\=</span>{departureDate}&return=${encodeURIComponent(returnDate)}`;
-        /*`src/search_result/searchResult.html?destination=${encodeURIComponent(destination)}&departure=${departureDate}`;*/
+      window.location.href = `src/search_result/searchResult.html?destination=${encodeURIComponent(destination)}&departure=${departureDate}`;
     });
   }
 });
