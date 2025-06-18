@@ -197,3 +197,53 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const priceRange = document.getElementById('priceRange').value.trim().toLowerCase();
+    const date = document.getElementById('date').value;
+    const hotelRating = document.getElementById('hotelRating').value.toLowerCase();
+
+    const flights = Array.from(document.querySelectorAll('#flights .card'));
+    const hotels = Array.from(document.querySelectorAll('#hotels .card'));
+    const attractions = Array.from(document.querySelectorAll('#attractions .card'));
+
+    function filterCards(cards, type) {
+      return cards.filter(card => {
+        const text = card.querySelector('.card-text').textContent.toLowerCase();
+
+        let matchesPrice = true;
+        if (priceRange) {
+          matchesPrice = text.includes(priceRange);
+        }
+
+        let matchesRating = true;
+        if (hotelRating && hotelRating !== "hotel rating") {
+          matchesRating = text.includes(hotelRating);
+        }
+
+        return matchesPrice && matchesRating;
+      });
+    }
+
+    const filteredFlights = filterCards(flights, 'flights');
+    const filteredHotels = filterCards(hotels, 'hotels');
+    const filteredAttractions = filterCards(attractions, 'attractions');
+
+    function buildHtml(title, cards) {
+      if (cards.length === 0) return `<h5>${title}: No results found.</h5>`;
+      const cardsHtml = cards.map(card => card.outerHTML).join('');
+      return `<h4>${title}</h4><div class="row g-3">${cardsHtml}</div>`;
+    }
+
+    const resultsDiv = document.getElementById('filteredResults');
+    resultsDiv.innerHTML =
+      buildHtml('Flights', filteredFlights) +
+      buildHtml('Hotels', filteredHotels) +
+      buildHtml('Attractions', filteredAttractions);
+  });
+});
+
