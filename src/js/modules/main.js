@@ -3,12 +3,12 @@ import { getEstimatedFlightCost, getEstimatedHotelCost, getEstimatedAttractionCo
 import { FOURSQUARE_API_KEY } from './config.js';
 
 const allDestinations = [
-  { name: 'Paris', description: 'The city of lights and romance.', image: 'assets/images/paris.jpg' },
-  { name: 'Tokyo', description: 'A blend of tradition and technology.', image: 'assets/images/tokyo.jpg' },
-  { name: 'Rio de Janeiro', description: 'Vibrant culture and stunning beaches.', image: 'assets/images/rio.jpg' },
-  { name: 'New York', description: 'The city that never sleeps.', image: 'assets/images/newyork.jpg' },
-  { name: 'London', description: 'History and modernity combined.', image: 'assets/images/london.jpg' },
-  { name: 'Sydney', description: 'Harbour city with iconic Opera House.', image: 'assets/images/sydney.jpg' }
+  { name: 'Paris', description: 'The city of lights and romance.', image: '/images/paris.jpg' },
+  { name: 'Tokyo', description: 'A blend of tradition and technology.', image: '/images/tokyo.jpg' },
+  { name: 'Rio de Janeiro', description: 'Vibrant culture and stunning beaches.', image: '/images/rio.jpg' },
+  { name: 'New York', description: 'The city that never sleeps.', image: '/images/newyork.jpg' },
+  { name: 'London', description: 'History and modernity combined.', image: '/images/london.jpg' },
+  { name: 'Sydney', description: 'Harbour city with iconic Opera House.', image: '/images/sydney.jpg' }
 ];
 
 // Busca la imagen de la ciudad en Foursquare, si no hay usa la imagen manual
@@ -64,7 +64,7 @@ async function displayRandomDestinations() {
 
   const destinationsWithImages = await Promise.all(selected.map(async dest => {
     let image = await getCityImage(dest.name, dest.image);
-    if (!image) image = 'src/public/images/city-placeholder.jpg';
+    if (!image) image = '/images/city-placeholder.jpg';
     return { ...dest, image };
   }));
 
@@ -74,7 +74,7 @@ async function displayRandomDestinations() {
       <div class="col-md-4">
         <div class="card h-100">
           <img src="${dest.image}" class="card-img-top" alt="${dest.name}" loading="lazy"
-               onerror="this.onerror=null;this.src='src/public/images/city-placeholder.jpg';">
+               onerror="this.onerror=null;this.src='/images/city-placeholder.jpg';">
           <div class="card-body">
             <h5 class="card-title">${dest.name}</h5>
             <a href="#" class="btn btn-outline-primary btn-sm explore-btn"
