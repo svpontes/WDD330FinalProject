@@ -19,6 +19,16 @@
     height: 200px;
 }
 
+.card-img-top{
+
+    color: white;
+}
+
+.img.card-img-top {
+
+    color: white;
+}
+
 /* Hover animado para links del header */
 .nav-link,
 .nav a,
