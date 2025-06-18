@@ -18,3 +18,5 @@ export function initResponsive() {
     adjustLayout();
     window.addEventListener('resize', adjustLayout);
 }
+
+initResponsive();

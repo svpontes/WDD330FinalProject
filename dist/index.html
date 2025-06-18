@@ -5,16 +5,88 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Travel Planner - Plan your trips efficiently with flight and hotel searches, itinerary building, and more.">
-    <meta name="author" content="Your Name">
+    <meta name="authors" content="Sergio and Valdemar">
     <title>Travel Planner</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/triptptrip-ico-Dg7IdLd0.png" type="ico image - logo trip2trip">
+  <script type="module" crossorigin src="/assets/index-CJ4wur-A.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-BwpeFkbV.css">
 </head>
 
 <body>
-    <h1>WELCOME TO NAME OF THE PROJECT</h1>
-    
+    <div class="hero-img-container">
+        <img src="/assets/travel-CxY7odUI.jpg" class="img-fluid w-100" alt="Imagen Hero" loading="lazy">
+    </div>
+    <!-- Header con logo e imagen -->
+    <header class="d-flex align-items-center justify-content-between p-3 bg-primary" id="main-header">
+        <div class="d-flex align-items-center">
+            <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20?%3e%3csvg%20id='_x31_-outline-expand'%20style='enable-background:new%200%200%2064%2064;'%20version='1.1'%20viewBox='0%200%2064%2064'%20xml:space='preserve'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cpolygon%20points='27.779,24.146%2020.255,3.474%2025.893,1.422%2039.055,20.043%20'%20style='fill:%2342A5B2;'/%3e%3cpath%20d='M4.799,28.254l45.178-16.443c1.142-0.416,2.411-0.29,3.449,0.342l3.826,2.33%20c2.076-0.755,4.372,0.315,5.127,2.391c0.756,2.076-0.314,4.371-2.391,5.127L28.039,33.629L6.851,33.892L4.799,28.254z'%20style='fill:%2362C4C3;'/%3e%3cpolygon%20points='5.138,17.489%201.379,18.857%204.799,28.254%2012.317,25.518%20'%20style='fill:%2342A5B2;'/%3e%3cpolygon%20points='29.148,27.905%2036.671,48.578%2042.311,46.526%2040.423,23.801%20'%20style='fill:%2342A5B2;'/%3e%3crect%20height='2'%20style='fill:%233A4249;'%20transform='matrix(0.9398%20-0.3417%200.3417%200.9398%20-1.8093%2019.2123)'%20width='5'%20x='51.122'%20y='13.741'/%3e%3crect%20height='1.999'%20style='fill:%233A4249;'%20transform='matrix(0.9397%20-0.3419%200.3419%200.9397%20-3.2838%2016.6657)'%20width='1.999'%20x='44.634'%20y='16.648'/%3e%3crect%20height='1.999'%20style='fill:%233A4249;'%20transform='matrix(0.9397%20-0.3419%200.3419%200.9397%20-3.9781%2015.463)'%20width='1.999'%20x='40.875'%20y='18.016'/%3e%3crect%20height='1.999'%20style='fill:%233A4249;'%20transform='matrix(0.9397%20-0.3419%200.3419%200.9397%20-4.6724%2014.2604)'%20width='1.999'%20x='37.117'%20y='19.385'/%3e%3crect%20height='1.999'%20style='fill:%233A4249;'%20transform='matrix(0.9397%20-0.3419%200.3419%200.9397%20-5.3667%2013.0577)'%20width='1.999'%20x='33.358'%20y='20.753'/%3e%3crect%20height='1.999'%20style='fill:%233A4249;'%20transform='matrix(0.9397%20-0.3419%200.3419%200.9397%20-6.0609%2011.855)'%20width='1.999'%20x='29.599'%20y='22.121'/%3e%3crect%20height='1.999'%20style='fill:%233A4249;'%20transform='matrix(0.9397%20-0.3419%200.3419%200.9397%20-6.7551%2010.6523)'%20width='1.999'%20x='25.84'%20y='23.489'/%3e%3crect%20height='1.999'%20style='fill:%233A4249;'%20transform='matrix(0.9397%20-0.3419%200.3419%200.9397%20-7.4494%209.4496)'%20width='1.999'%20x='22.081'%20y='24.857'/%3e%3crect%20height='2'%20style='fill:%233A4249;'%20transform='matrix(0.9396%20-0.3423%200.3423%200.9396%20-8.1523%208.2597)'%20width='2'%20x='18.323'%20y='26.225'/%3e%3crect%20height='2'%20style='fill:%233A4249;'%20transform='matrix(0.9396%20-0.3423%200.3423%200.9396%20-8.8478%207.0556)'%20width='2'%20x='14.564'%20y='27.593'/%3e%3cpath%20d='M36,54H19c-3.309,0-6-2.691-6-6s2.691-6,6-6h7v2h-7c-2.206,0-4,1.794-4,4s1.794,4,4,4h17V54z'%20style='fill:%233A4249;'/%3e%3crect%20height='2'%20style='fill:%233A4249;'%20width='2'%20x='38'%20y='52'/%3e%3cpath%20d='M50.5,61H19v-2h31.5c1.379,0,2.5-1.122,2.5-2.5S51.879,54,50.5,54H42v-2h8.5%20c2.481,0,4.5,2.019,4.5,4.5S52.981,61,50.5,61z'%20style='fill:%233A4249;'/%3e%3crect%20height='2'%20style='fill:%233A4249;'%20width='10'%20x='7'%20y='59'/%3e%3ccircle%20cx='5'%20cy='60'%20r='3'%20style='fill:%23EFBC2E;'/%3e%3ccircle%20cx='28'%20cy='43'%20r='3'%20style='fill:%23EFBC2E;'/%3e%3c/svg%3e" alt="Travel Planner Logo" style="height:48px; width:auto; margin-right:16px;">
+            <h1 class="mb-0 text-white fs-3">Travel Planner</h1>
+        </div>
+        <nav>
+            <nav aria-label="Main navigation">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="src/search_result/searchResult.html">Search</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="src/Itinerary/itinerary.html">Itinerary</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#login">Login</a></li>       
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <!-- Navbar -->
+    <main class="container mb-5">
+        <!-- Home Page -->
+        <section id="home">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-8 mx-auto text-center">
+                    <h1 class="mb-3">Plan Your Next Adventure</h1>
+                    <form class="row g-2 justify-content-center" id="main-search-form">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder="Where do you want to go?" list="destinations"
+                                id="destination-input">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="date" class="form-control" id="departure-date">
+                        </div>
+                        <div class="col-sm-3">
+                            <button type="submit" class="btn btn-primary w-100">Start Planning</button>
+                        </div>
+                    </form>
+                    <!-- Aquí se mostrarán los costos -->
+                    <div id="cost-summary" class="mt-3"></div>
+                </div>
+            </div>
+            <h2 class="mb-3">Featured Destinations</h2>
+            <div class="row g-3 mb-5">
+            </div>
+            <!-- Modal para descripción de ciudad -->
+            <div class="modal fade" id="cityModal" tabindex="-1" aria-labelledby="cityModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="cityModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="cityModalBody"></div>
+                    </div>
+                </div>
+                </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3" id="main-footer">
+        <div class="container">
+            <p class="mb-1">&copy; 2023 Travel Planner. All rights reserved.</p>
+            <div>
+                <a href="#" class="text-decoration-none me-3">Contact</a>
+                <a href="#" class="text-decoration-none me-3">About</a>
+                <a href="#" class="text-decoration-none">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

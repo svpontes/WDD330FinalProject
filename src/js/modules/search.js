@@ -1,25 +1,104 @@
-// src/js/modules/search.js
+import { planTrip } from './tripPlanner.js';
 
-export const searchFlights = async (destination, dates) => {
-    // Function to search for flights based on destination and dates
-    // Call the Amadeus API to fetch flight data
-};
+// Llama a planTrip y retorna los resultados
+export async function handleSearch(destination, departureDate, returnDate) {
+  return await planTrip(destination, departureDate, returnDate);
+}
 
-export const searchHotels = async (destination, dates) => {
-    // Function to search for hotels based on destination and dates
-    // Call the Amadeus API to fetch hotel data
-};
+// Muestra todos los resultados en sus tabs
+export function displaySearchResults(results) {
+  displayFlights(results.flights);
+  displayHotels(results.hotels);
+  displayAttractions(results.attractions);
+}
 
-export const searchAttractions = async (destination) => {
-    // Function to search for attractions based on the destination
-    // Call the TripAdvisor API to fetch attractions data
-};
+// Renderiza vuelos
+function displayFlights(flights) {
+  const el = document.getElementById('flights');
+  el.innerHTML = flights && flights.length > 0
+    ? flights.map(f => `
+        <div class="card h-100 m-2 p-2">
+          <h5>${f.itineraries[0].segments[0].departure.iataCode} → ${f.itineraries[0].segments.slice(-1)[0].arrival.iataCode}</h5>
+          <p>Precio: ${f.price.total} ${f.price.currency}</p>
+          <button class="btn btn-success btn-sm">Add to Itinerary</button>
+        </div>
+      `).join('')
+    : '<p>No hay vuelos disponibles.</p>';
+}
 
-export const displaySearchResults = (results) => {
-    // Function to display the search results on the page
-    // This will handle flights, hotels, and attractions
-};
+// Renderiza hoteles
+function displayHotels(hotels) {
+  const el = document.getElementById('hotels');
+  el.innerHTML = hotels && hotels.length > 0
+    ? hotels.map(h => `
+        <div class="card h-100 m-2 p-2">
+          <h5>${h.hotel.name}</h5>
+          <p>Dirección: ${h.hotel.address.lines.join(', ')}</p>
+          <button class="btn btn-success btn-sm">Add to Itinerary</button>
+        </div>
+      `).join('')
+    : '<p>No hay hoteles disponibles.</p>';
+}
 
-export const filterResults = (results, criteria) => {
-    // Function to filter the search results based on user-selected criteria
-};
+// Renderiza atracciones (con imagen si existe)
+function displayAttractions(attractions) {
+  const el = document.getElementById('attractions');
+  el.innerHTML = attractions && attractions.length > 0
+    ? attractions.map(a => `
+        <div class="card h-100 m-2 p-2">
+          ${a.image ? `<img src="${a.image}" class="card-img-top" alt="${a.name}" loading="lazy"
+            onerror="this.onerror=null;this.src='src/public/images/attraction-placeholder.jpg';">` : ''}
+          <h5>${a.name}</h5>
+          <p>${a.address}</p>
+          <button class="btn btn-success btn-sm">Add to Itinerary</button>
+        </div>
+      `).join('')
+    : '<p>No hay atracciones disponibles.</p>';
+}
+
+export function displayFlights(flights) {
+    const el = document.getElementById('flights');
+    el.innerHTML = flights && flights.length > 0
+      ? flights.map((f, idx) => `
+          <div class="card h-100 m-2 p-2">
+            <h5>${f.itineraries[0].segments[0].departure.iataCode} → ${f.itineraries[0].segments.slice(-1)[0].arrival.iataCode}</h5>
+            <p>Precio: ${f.price.total} ${f.price.currency}</p>
+            <p>${f.itineraries[0].segments[0].departure.cityName || ''}, ${f.itineraries[0].segments[0].departure.countryName || ''}</p>
+            <button class="btn btn-success btn-sm add-itinerary-btn" data-type="flight" data-idx="${idx}">Add to Itinerary</button>
+          </div>
+        `).join('')
+      : '<p>No hay vuelos disponibles.</p>';
+}
+  
+// ...existing code...
+
+export function displayHotels(hotels) {
+    const el = document.getElementById('hotels');
+    el.innerHTML = hotels && hotels.length > 0
+      ? hotels.map((h, idx) => `
+          <div class="card h-100 m-2 p-2">
+            <h5>${h.hotel.name}</h5>
+            <p>Dirección: ${h.hotel.address.lines.join(', ')}</p>
+            <p>${h.hotel.address.state || ''}, ${h.hotel.address.countryCode || ''}</p>
+            <button class="btn btn-success btn-sm add-itinerary-btn" data-type="hotel" data-idx="${idx}">Add to Itinerary</button>
+          </div>
+        `).join('')
+      : '<p>No hay hoteles disponibles.</p>';
+  }
+  
+  export function displayAttractions(attractions) {
+    const el = document.getElementById('attractions');
+    el.innerHTML = attractions && attractions.length > 0
+      ? attractions.map((a, idx) => `
+          <div class="card h-100 m-2 p-2">
+            ${a.image ? `<img src="${a.image}" class="card-img-top" alt="${a.name}" loading="lazy"
+              onerror="this.onerror=null;this.src='src/public/images/attraction-placeholder.jpg';">` : ''}
+            <h5>${a.name}</h5>
+            <p>${a.address}</p>
+            <p>${a.state || ''}, ${a.country || ''}</p>
+            <button class="btn btn-success btn-sm add-itinerary-btn" data-type="attraction" data-idx="${idx}">Add to Itinerary</button>
+          </div>
+        `).join('')
+      : '<p>No hay atracciones disponibles.</p>';
+  }
+  

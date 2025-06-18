@@ -1,0 +1,4 @@
+export const GEOAPIFY_API_KEY = "397121b30a3c49eaa945371f8417aa18";
+export const AMADEUS_CLIENT_ID = "0PfNiLV0usTxERZ7SoLAJWhKpitxuF8A";
+export const AMADEUS_CLIENT_SECRET = "SjEAleISPaHUlyjn";
+export const FOURSQUARE_API_KEY = "fsq3MSUin/EKCmPmngZu9sDQdl47DgPsgEEYxlvk8ws2ZYI=";
