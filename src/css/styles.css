@@ -21,7 +21,7 @@
 
 .span.navbar-toggler-icon{
 
-    color: white;
+    color: white !important;
 }
 
 /* Hover animado para links del header */
