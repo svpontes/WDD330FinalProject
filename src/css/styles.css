@@ -19,12 +19,7 @@
     height: 200px;
 }
 
-.card-img-top{
-
-    color: white;
-}
-
-.img.card-img-top {
+.span.navbar-toggler-icon{
 
     color: white;
 }
