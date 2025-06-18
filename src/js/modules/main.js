@@ -3,12 +3,12 @@ import { getEstimatedFlightCost, getEstimatedHotelCost, getEstimatedAttractionCo
 import { FOURSQUARE_API_KEY } from './config.js';
 
 const allDestinations = [
-  { name: 'Paris', description: 'The city of lights and romance.', image: 'src/public/images/paris.jpg' },
-  { name: 'Tokyo', description: 'A blend of tradition and technology.', image: 'src/public/images/tokyo.jpg' },
-  { name: 'Rio de Janeiro', description: 'Vibrant culture and stunning beaches.', image: 'src/public/images/rio.jpg' },
-  { name: 'New York', description: 'The city that never sleeps.', image: 'src/public/images/newyork.jpg' },
-  { name: 'London', description: 'History and modernity combined.', image: 'src/public/images/london.jpg' },
-  { name: 'Sydney', description: 'Harbour city with iconic Opera House.', image: 'src/public/images/sydney.jpg' }
+  { name: 'Paris', description: 'The city of lights and romance.', image: 'assets/images/paris.jpg' },
+  { name: 'Tokyo', description: 'A blend of tradition and technology.', image: 'assets/images/tokyo.jpg' },
+  { name: 'Rio de Janeiro', description: 'Vibrant culture and stunning beaches.', image: 'assets/images/rio.jpg' },
+  { name: 'New York', description: 'The city that never sleeps.', image: 'assets/images/newyork.jpg' },
+  { name: 'London', description: 'History and modernity combined.', image: 'assets/images/london.jpg' },
+  { name: 'Sydney', description: 'Harbour city with iconic Opera House.', image: 'assets/images/sydney.jpg' }
 ];
 
 // Busca la imagen de la ciudad en Foursquare, si no hay usa la imagen manual
