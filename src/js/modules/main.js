@@ -3,12 +3,12 @@ import { getEstimatedFlightCost, getEstimatedHotelCost, getEstimatedAttractionCo
 import { FOURSQUARE_API_KEY } from './config.js';
 
 const allDestinations = [
-  { name: 'Paris', description: 'The city of lights and romance.', image: '/images/paris.jpg' },
-  { name: 'Tokyo', description: 'A blend of tradition and technology.', image: '/images/tokyo.jpg' },
-  { name: 'Rio de Janeiro', description: 'Vibrant culture and stunning beaches.', image: '/images/rio.jpg' },
-  { name: 'New York', description: 'The city that never sleeps.', image: '/images/newyork.jpg' },
-  { name: 'London', description: 'History and modernity combined.', image: '/images/london.jpg' },
-  { name: 'Sydney', description: 'Harbour city with iconic Opera House.', image: '/images/sydney.jpg' }
+  { name: 'Paris', description: 'The city of lights and romance.', image: '/images/paris.webp' },
+  { name: 'Tokyo', description: 'A blend of tradition and technology.', image: '/images/tokyo.webp' },
+  { name: 'Rio de Janeiro', description: 'Vibrant culture and stunning beaches.', image: '/images/rio.webp' },
+  { name: 'New York', description: 'The city that never sleeps.', image: '/images/newyork.webp' },
+  { name: 'London', description: 'History and modernity combined.', image: '/images/london.webp' },
+  { name: 'Sydney', description: 'Harbour city with iconic Opera House.', image: '/images/sydney.webp' }
 ];
 
 // Busca la imagen de la ciudad en Foursquare, si no hay usa la imagen manual
