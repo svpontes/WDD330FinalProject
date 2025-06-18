@@ -31,9 +31,9 @@ export const initHomePage = () => {
   
     // Sample data for featured destinations
     const sampleDestinations = [
-      { name: 'Paris', description: 'The city of lights.', image: 'src/public/images/paris.jpg' },
-      { name: 'Tokyo', description: 'A bustling metropolis.', image: 'src/public/images/tokyo.jpg' },
-      { name: 'Rio de Janeiro', description: 'Famous for its beaches.', image: 'src/public/images/rio.jpg' }
+      { name: 'Paris', description: 'The city of lights.', image: '/images/paris.jpg'},
+      { name: 'Tokyo', description: 'A bustling metropolis.', image: '/images/tokyo.jpg' },
+      { name: 'Rio de Janeiro', description: 'Famous for its beaches.', image: '/images/rio.jpg' }
     ];
   
     displayFeaturedDestinations(sampleDestinations);
