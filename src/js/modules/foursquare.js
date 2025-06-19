@@ -40,7 +40,7 @@ export async function searchAttractions(lat, lon, query = "tourist attraction") 
       fsq_id: place.fsq_id,
       lat: place.geocodes?.main?.latitude || 0,
       lon: place.geocodes?.main?.longitude || 0,
-      image: image || 'src/public/images/attraction-placeholder.jpg', // Imagen genérica si no hay
+      image: image || '/images/attraction-placeholder.jpg', // Imagen genérica si no hay
       price: 0 // Puedes ajustar si tienes precios
     };
   }));
