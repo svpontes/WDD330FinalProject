@@ -1,4 +1,4 @@
-<!doctype html>
+<!--<!doctype html>
 <html lang="en">
 
 <head>
@@ -9,20 +9,21 @@
     <meta name="authors" content="Sergio and Valdemar" />
     <title>Travel Planner Trip2Trip</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="/assets/triptptrip-ico-Dg7IdLd0.png" type="image/x-icon" />
-  <script type="module" crossorigin src="/assets/main-depb2c3-.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/responsive-2DqupXO_.js">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="shortcut icon" href="/src/public/images/triptptrip-ico.png" type="image/x-icon" />
+  <script type="module" crossorigin src="/assets/styles-Bqt2ebZk.js"></script>
+  <script type="module" crossorigin src="/assets/main-DRZGa7rw.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/styles-6SYZ_9cW.css">
 </head>
 
 <body>
     <div class="hero-img-container">
-        <img src="/assets/travel-banner-cBDFjh-5.webp" class="img-fluid w-100" alt="Imagen Hero" loading="lazy" />
+        <img src="src/public/images/travel-banner.webp" class="img-fluid w-100" alt="Imagen Hero" loading="lazy" />
     </div>
 
-    <!-- Header com navbar responsiva -->
+  
     <header id="main-header" class="bg-primary">
         <nav class="navbar navbar-expand-lg container">
             <a class="navbar-brand d-flex align-items-center text-white" href="#">
@@ -46,7 +47,7 @@
         </nav>
     </header>
 
-    <!-- Main content -->
+  
     <main class="container mb-5">
         <section id="home">
             <div class="row align-items-center mb-4">
@@ -76,10 +77,9 @@
 
             <h2 class="mb-3">Featured Destinations</h2>
             <div class="row g-3 mb-5" id="featured-destinations">
-                <!-- Aqui você pode inserir cards ou destinos em JS -->
+          
             </div>
 
-            <!-- Modal para descrição de cidade -->
             <div class="modal fade" id="cityModal" tabindex="-1" aria-labelledby="cityModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -94,7 +94,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
+   
     <footer id="main-footer" class="bg-light text-center py-3">
         <div class="container">
             <p class="mb-1">&copy; 2023 Travel Planner. All rights reserved.</p>
@@ -106,8 +106,118 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/src/js/modules/utils.js"></script>
+    <script type="module" src="/src/js/modules/responsive.js"></script>
+    <script type="module" src="/src/js/modules/main.js"></script>
+</body>
+
+</html>-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Travel Planner - Plan your trips efficiently with flight and hotel searches, itinerary building, and more." />
+    <meta name="authors" content="Sergio and Valdemar" />
+    <title>Travel Planner Trip2Trip</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/assets/triptptrip-ico-Dg7IdLd0.png" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="hero-img-container">
+        <img src="/assets/travel-banner-cBDFjh-5.webp" class="img-fluid w-100" alt="Imagen Hero" loading="lazy" />
+    </div>
+
+    <header id="main-header" class="bg-primary">
+        <nav class="navbar navbar-expand-lg container">
+            <a class="navbar-brand d-flex align-items-center text-white" href="#">
+                <img src="/src/public/images/triplogo.png" alt="Travel Planner Logo" height="48" />
+                <span class="ms-2 fs-3">Travel Planner</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white"
+                            href="src/search_result/searchResult.html">Search</a></li>
+                    <li class="nav-item"><a class="nav-link text-white"
+                            href="src/Itinerary/itinerary.html">Itinerary</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#login">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mb-5">
+        <section id="home">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-8 mx-auto text-center">
+                    <h1 class="mb-3">Plan Your Next Adventure</h1>
+                    <form class="row g-2 justify-content-center" id="main-search-form"
+                        action="/src/search_result/searchResult.html" method="get" novalidate>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" placeholder="Your origin city" list="origins"
+                                id="origin-input" name="origin" required />
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" placeholder="Where do you want to go?"
+                                list="destinations" id="destination-input" name="destination" required />
+                            <datalist id="destinations"></datalist>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="date" class="form-control" id="departure-date" name="departureDate" required />
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="date" class="form-control" id="return-date" name="returnDate" />
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-primary w-100">Start Planning</button>
+                        </div>
+                    </form>
+
+                    <div id="cost-summary" class="mb-3"></div>
+                </div>
+            </div>
+
+            <h2 class="mb-3">Featured Destinations</h2>
+            <div class="row g-3 mb-5" id="featured-destinations">
+            </div>
+
+            <div class="modal fade" id="cityModal" tabindex="-1" aria-labelledby="cityModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="cityModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="cityModalBody"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" class="bg-light text-center py-3">
+        <div class="container">
+            <p class="mb-1">&copy; 2023 Travel Planner. All rights reserved.</p>
+            <div>
+                <a href="#" class="text-decoration-none me-3">Contact</a>
+                <a href="#" class="text-decoration-none me-3">About</a>
+                <a href="#" class="text-decoration-none">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
