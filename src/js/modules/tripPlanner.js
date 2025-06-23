@@ -1,4 +1,4 @@
-import { autocompleteCity } from './geoapify.js';
+/*import { autocompleteCity } from './geoapify.js';
 import { searchFlights, searchHotels } from './amadeus.js';
 import { searchAttractions } from './foursquare.js';
 
@@ -40,4 +40,4 @@ export async function planTrip(cityQuery, departureDate, returnDate) {
     hotels,
     attractions
   };
-}
+}*/

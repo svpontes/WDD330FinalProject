@@ -1,5 +1,5 @@
 // src/js/modules/home.js
-
+/*
 export const initHomePage = () => {
     const searchBar = document.getElementById('search-bar');
     const featuredDestinations = document.getElementById('featured-destinations');
@@ -38,4 +38,4 @@ export const initHomePage = () => {
   
     displayFeaturedDestinations(sampleDestinations);
   };
-  
+  */
